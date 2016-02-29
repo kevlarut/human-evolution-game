@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{B3956EE0-49A2-C1E3-0310-E189A6A7FDED}") = "HumanEvolution", "Assembly-CSharp.csproj", "{4BAD9280-328D-4E21-8B70-D98A1257552D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4BAD9280-328D-4E21-8B70-D98A1257552D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BAD9280-328D-4E21-8B70-D98A1257552D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BAD9280-328D-4E21-8B70-D98A1257552D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BAD9280-328D-4E21-8B70-D98A1257552D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

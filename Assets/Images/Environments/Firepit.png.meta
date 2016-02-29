@@ -1,0 +1,173 @@
+fileFormatVersion: 2
+guid: 7a049b2d409011940bf2715db5fa41a4
+timeCreated: 1456701144
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Firepit_0
+    21300002: Firepit_1
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -2
+  maxTextureSize: 256
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Firepit_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 16, y: -19}
+        - {x: 13, y: -20}
+        - {x: 14, y: -18}
+        - {x: 11, y: -16}
+        - {x: 9, y: -18}
+        - {x: 14, y: -13}
+        - {x: 15, y: -10}
+        - {x: 19, y: 17}
+        - {x: 1, y: 17}
+        - {x: -32, y: -42}
+        - {x: -32, y: -57}
+        - {x: -18, y: -64}
+        - {x: 15, y: -64}
+        - {x: 27, y: -61}
+        - {x: 32, y: -55}
+        - {x: 32, y: -38}
+        - {x: 19, y: -20}
+      - - {x: 8, y: 16}
+        - {x: 11, y: 17}
+        - {x: 11, y: 20}
+        - {x: 8, y: 21}
+        - {x: 6, y: 19}
+      - - {x: 9, y: 28}
+        - {x: 7, y: 26}
+        - {x: 7, y: 24}
+        - {x: 9, y: 22}
+        - {x: 11, y: 22}
+        - {x: 13, y: 24}
+        - {x: 13, y: 25}
+        - {x: 10, y: 28}
+      - - {x: 14, y: 42}
+        - {x: 8, y: 37}
+        - {x: 9, y: 34}
+        - {x: 13, y: 34}
+        - {x: 17, y: 38}
+        - {x: 17, y: 41}
+      - - {x: 14, y: 42}
+        - {x: 17, y: 43}
+        - {x: 17, y: 46}
+        - {x: 14, y: 47}
+        - {x: 12, y: 45}
+      - - {x: 12, y: 47}
+        - {x: 15, y: 48}
+        - {x: 15, y: 51}
+        - {x: 12, y: 52}
+        - {x: 10, y: 50}
+      - - {x: 16, y: 58}
+        - {x: 19, y: 59}
+        - {x: 19, y: 62}
+        - {x: 16, y: 63}
+        - {x: 14, y: 61}
+    - name: Firepit_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 18, y: 13}
+        - {x: 11, y: 13}
+        - {x: 9, y: 11}
+        - {x: 7, y: 7}
+        - {x: 7, y: 6}
+        - {x: 7, y: 10}
+        - {x: 14, y: 15}
+        - {x: 15, y: 19}
+        - {x: 16, y: 37}
+        - {x: 0, y: 37}
+        - {x: -32, y: -29}
+        - {x: -32, y: -58}
+        - {x: -20, y: -64}
+        - {x: 28, y: -64}
+        - {x: 32, y: -56}
+        - {x: 32, y: -24}
+      - - {x: 13, y: -8}
+        - {x: 15, y: -9}
+        - {x: 18, y: -7}
+        - {x: 18, y: -1}
+        - {x: 16, y: 1}
+        - {x: 13, y: 0}
+      - - {x: 8, y: 36}
+        - {x: 11, y: 37}
+        - {x: 11, y: 40}
+        - {x: 8, y: 41}
+        - {x: 6, y: 39}
+      - - {x: 9, y: 48}
+        - {x: 7, y: 46}
+        - {x: 7, y: 44}
+        - {x: 9, y: 42}
+        - {x: 11, y: 42}
+        - {x: 13, y: 44}
+        - {x: 13, y: 45}
+        - {x: 10, y: 48}
+      - - {x: 14, y: 62}
+        - {x: 8, y: 57}
+        - {x: 9, y: 54}
+        - {x: 13, y: 54}
+        - {x: 17, y: 58}
+        - {x: 17, y: 61}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
