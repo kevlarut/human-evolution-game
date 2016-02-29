@@ -1,0 +1,2 @@
+# human-evolution-game
+A computer game to teach about how human evolution works.  Many people think that evolution through natural selection doesn't apply to humans, or that it once did, but stopped 40,000-50,000 years ago.  However, evolution DOES apply to humans, and it is happening now.  Every environment selects for something.  In this game, the player controls a tribe as it adapts to be better- or worse-adapted for its environment.
