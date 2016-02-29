@@ -4,19 +4,8 @@ using Random = UnityEngine.Random;
 
 namespace Assets.Scripts
 {
-    public enum Direction
-    {
-        Right,
-        Left
-    }
-
-    public enum PersonState
-    {
-        Standing,
-        Sitting,
-        Running
-    }
-
+    [RequireComponent(typeof(Animator))]
+    [RequireComponent(typeof(BoxCollider2D))]
     public class Person : MonoBehaviour
     {
         public float MinStateChangeDelay = 1f;
@@ -24,6 +13,8 @@ namespace Assets.Scripts
         public PersonState PersonState = PersonState.Standing;
         public Direction Direction = Direction.Right;
         public float Speed = 1.0f;
+        public GameObject CharacterDetailsPanel;
+        public string Name;
 
         private float _currentStateChangeDelay;
         private Animator _animator;
@@ -86,6 +77,19 @@ namespace Assets.Scripts
             }
         }
 
+        void OnMouseDown()
+        {
+            CharacterDetailsPanel.SetActive(true);
+            var characterDetailsPanel = CharacterDetailsPanel.GetComponent<CharacterDetailsPanel>();
+            var person = GetComponent<Person>();
+            characterDetailsPanel.LoadPerson(person);
+        }
+
+        public void Sit()
+        {
+            ChangeState(PersonState.Sitting);
+        }
+
         private void ChangeDirection(Direction direction)
         {
             if (Direction != direction)
@@ -106,7 +110,10 @@ namespace Assets.Scripts
         private void ChangeState(PersonState personState)
         {
             PersonState = personState;
-            _animator.SetInteger("State", Convert.ToInt32(PersonState));
+            if (_animator && _animator.isInitialized)
+            {
+                _animator.SetInteger("State", Convert.ToInt32(PersonState));
+            }
         }
     }
 }
