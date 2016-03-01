@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4BAD9280-328D-4E21-8B70-D98A1257552D}</ProjectGuid>
+    <ProjectGuid>{553700C1-6F50-DE5B-14AA-7C18E822CC8E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -45,7 +45,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\CharacterDetailsPanel.cs" />
+     <Compile Include="Assets\Scripts\Direction.cs" />
+     <Compile Include="Assets\Scripts\DistinctBy.cs" />
+     <Compile Include="Assets\Scripts\Hair.cs" />
+     <Compile Include="Assets\Scripts\HumanSpawner.cs" />
+     <Compile Include="Assets\Scripts\OptionalClothing.cs" />
      <Compile Include="Assets\Scripts\Person.cs" />
+     <Compile Include="Assets\Scripts\PersonState.cs" />
+     <Compile Include="Assets\Scripts\RequiredAndMutuallyExclusiveClothing.cs" />
      <Compile Include="Assets\Scripts\SpriteWithSortedOrder.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

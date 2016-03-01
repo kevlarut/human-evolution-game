@@ -18,13 +18,16 @@ namespace Assets.Scripts
 
         private float _currentStateChangeDelay;
         private Animator _animator;
+        private Animator[] _childAnimators;
         private Vector3 _target;
 
         void Start()
         {
             _currentStateChangeDelay = Random.Range(MinStateChangeDelay, MaxStateChangeDelay);
             _animator = this.GetComponent<Animator>();
-            _animator.SetInteger("State", Convert.ToInt32(PersonState));
+            _childAnimators = GetComponentsInChildren<Animator>();
+
+            SetAnimationStateInSelfAndChildren(Convert.ToInt32(PersonState));
         }
 
         void Update()
@@ -54,8 +57,7 @@ namespace Assets.Scripts
                             ChangeDirection(direction);
                             break;
                         case 2:
-                            PersonState = PersonState.Running;
-                            _animator.SetInteger("State", Convert.ToInt32(PersonState));
+                            ChangeState(PersonState.Running);
                             _target = new Vector3(Random.Range(-2.75f, 2.75f), transform.position.y);
                             if (_target.x > transform.position.x)
                             {
@@ -70,7 +72,7 @@ namespace Assets.Scripts
                             ChangeState(PersonState.Sitting);
                             break;
                         case 4:
-                            _animator.Play("Scratching");
+                            PlayOneShotAnimation("Scratching");
                             break;
                     }
                 }
@@ -112,7 +114,25 @@ namespace Assets.Scripts
             PersonState = personState;
             if (_animator && _animator.isInitialized)
             {
-                _animator.SetInteger("State", Convert.ToInt32(PersonState));
+                SetAnimationStateInSelfAndChildren(Convert.ToInt32(PersonState));
+            }
+        }
+
+        private void PlayOneShotAnimation(string animationName)
+        {
+            _animator.Play(animationName);
+            foreach (var animator in _childAnimators)
+            {
+                animator.Play(animationName);
+            }
+        }
+        
+        private void SetAnimationStateInSelfAndChildren(int animationState)
+        {
+            _animator.SetInteger("State", animationState);
+            foreach (var animator in _childAnimators)
+            {
+                animator.SetInteger("State", animationState);
             }
         }
     }

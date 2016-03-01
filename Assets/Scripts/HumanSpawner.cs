@@ -10,6 +10,8 @@ namespace Assets.Scripts
 {
     public class HumanSpawner : MonoBehaviour
     {
+        public int NumberOfHumansToSpawn = 2;
+
         public GameObject CharacterDetailsPanel;
         public GameObject ManPrefab;
 
@@ -62,7 +64,7 @@ namespace Assets.Scripts
                                  "Zebulun",
                              };
 
-            for (var i = 0; i < 2; i++)
+            for (var i = 0; i < NumberOfHumansToSpawn; i++)
             {
                 var man = Instantiate(ManPrefab);
                 var x = Random.Range(-2.75f, 2.75f);
@@ -76,6 +78,32 @@ namespace Assets.Scripts
                 if (Random.Range(0, 2) == 0)
                 {
                     person.Sit();
+                }
+
+                foreach (var optionalClothing in person.GetComponentsInChildren<OptionalClothing>())
+                {
+                    if (Random.Range(0, 2) == 0)
+                    {
+                        optionalClothing.Deactivate();
+                    }
+                }
+
+                var requiredAndMutuallyExclusiveClothings = person.GetComponentsInChildren<RequiredAndMutuallyExclusiveClothing>();
+                var firstItemOfEachTypeAfterBeingSortedRandomly = requiredAndMutuallyExclusiveClothings
+                    .OrderBy(item => Random.value)
+                    .DistinctBy(item => item.Key);
+                var clothingsToDisable = requiredAndMutuallyExclusiveClothings
+                    .Except(firstItemOfEachTypeAfterBeingSortedRandomly);
+                foreach (var clothing in clothingsToDisable)
+                {
+                    clothing.Deactivate();
+                }
+
+                var isBald = Convert.ToBoolean(Random.Range(0, 2));
+                var hair = person.GetComponentInChildren<Hair>();
+                if (hair && isBald)
+                {
+                    hair.Deactivate();
                 }
             }
         }
